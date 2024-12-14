@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div  className="space-x-40  body flex bg-slate-50 h-18 shadow-md max-w-screen-2xl justify-between container mx-auto px-4 md:px-10">
+    <div  className="space-x-40 w-screen  body flex bg-slate-50 h-18 shadow-md justify-between  mx-auto px-4 md:px-10">
       {/* Left Section */}
       <div className=" gap-2 flex h-18">
         <div>
