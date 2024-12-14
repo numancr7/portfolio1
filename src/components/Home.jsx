@@ -1,5 +1,5 @@
 import React from "react";
-import pic from "/profile-pic.png";
+import pic2 from "/Portfolio.jpg";
 import { ReactTyped } from "react-typed";
 
 import { FaGithub } from "react-icons/fa";
@@ -15,7 +15,7 @@ import { FaNodeJs } from "react-icons/fa";
 const Home = () => {
   return (
     <>
-      <div className=" body md:flex  mt-5 container  shadow-md   md:gap-10 px-5 md:px-10">
+      <div name="Home" className=" body md:flex  mt-5 container  shadow-md   md:gap-10 px-5 md:px-10">
         <div className=" md:w-[65vw] w-[90vw] md:py-20 ">
           <div className="">
             <h2 className="text-xl md:text-2xl font-bold">
@@ -142,7 +142,7 @@ const Home = () => {
         </div>
 
         <div className="md:w-[35vw]  m-10 md:mt-24 md:ml-44 ">
-          <img src={pic} alt="" className="h-80 " />
+          <img src={pic2} alt="" className="h-80 rounded-full" />
         </div>
       </div>
     </>

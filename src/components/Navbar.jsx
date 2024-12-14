@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import pic from "/profile-pic.png";
 import { IoMenu } from "react-icons/io5";
-import { IoClose } from "react-icons/io5";
+import { IoClose } from "react-icons/io5"
+import { Link } from "react-scroll";import { FaDisplay } from "react-icons/fa6";
+;
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false); // Initialize menu as false (closed)
@@ -9,13 +11,13 @@ const Navbar = () => {
   const navitems = [
     { id: 1, text: "Home" },
     { id: 2, text: "About" },
-    { id: 3, text: "ContactUs" },
+    { id: 3, text: "Contact Us" },
     { id: 4, text: "Portfolio" },
     { id: 5, text: "Experience" },
   ];
 
   return (
-    <div className="space-x-40  body flex bg-slate-50 h-18 shadow-md max-w-screen-2xl justify-between container mx-auto px-4 md:px-10">
+    <div  className="space-x-40  body flex bg-slate-50 h-18 shadow-md max-w-screen-2xl justify-between container mx-auto px-4 md:px-10">
       {/* Left Section */}
       <div className=" gap-2 flex h-18">
         <div>
@@ -41,8 +43,15 @@ const Navbar = () => {
             <li
               className="hover:scale-105 duration-200 cursor-pointer"
               key={id}
-            >
-              {text}
+            ><Link
+            to={text}
+            smooth={true}
+            duration={500}
+            offset={-70}
+            activeClass="active"
+          >
+            {text}
+          </Link>
             </li>
           ))}
         </ul>
@@ -77,8 +86,16 @@ const Navbar = () => {
         <li
           className="duration-200 cursor-pointer hover:scale-105 font-semibold text-lg py-2"
           key={id}
-        >
-          {text}
+        ><Link
+        onClick={() => setMenu(!menu)}
+        to={text}
+        smooth={true}
+        duration={500}
+        offset={-70}
+        activeClass="active"
+      >
+        {text}
+      </Link>
         </li>
       ))}
     </ul>
